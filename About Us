@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Desert Pixel Media</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:white;
+}
+
+/* HERO */
+
+.about-hero{
+text-align:center;
+padding:90px 20px 50px;
+}
+
+.logo{
+width:140px;
+filter:drop-shadow(0 0 12px #ff7a00);
+animation:glow 3s infinite alternate;
+}
+
+.title{
+font-size:40px;
+margin-top:20px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.tagline{
+color:#ff7a00;
+margin-top:10px;
+font-size:15px;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+/* SECTION */
+
+.section{
+max-width:950px;
+margin:auto;
+padding:70px 20px;
+animation:fadeUp 1s ease;
+}
+
+.section h2{
+font-size:26px;
+margin-bottom:18px;
+font-weight:600;
+letter-spacing:1px;
+position:relative;
+}
+
+/* PREMIUM TITLE LINE */
+
+.section h2::after{
+content:"";
+display:block;
+width:50px;
+height:2px;
+background:#ff7a00;
+margin-top:8px;
+}
+
+.section p{
+opacity:0.85;
+line-height:1.8;
+font-size:15px;
+}
+
+/* CEO SECTION */
+
+.ceo{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+animation:fadeUp 1.2s ease;
+}
+
+/* IMAGE LEFT */
+
+.ceo-img{
+position:relative;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 0 30px rgba(255,122,0,0.25);
+transition:0.4s;
+}
+
+.ceo-img img{
+width:100%;
+display:block;
+}
+
+/* FRAME */
+
+.ceo-img::before{
+content:"";
+position:absolute;
+inset:0;
+border:1px solid rgba(255,122,0,0.4);
+border-radius:18px;
+}
+
+.ceo-img:hover{
+transform:scale(1.03);
+box-shadow:0 0 45px rgba(255,122,0,0.5);
+}
+
+/* CEO TEXT */
+
+.ceo-text h2{
+font-size:26px;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.ceo-text h3{
+font-size:22px;
+margin-bottom:5px;
+}
+
+.ceo-text span{
+font-size:14px;
+color:#ff7a00;
+}
+
+.ceo-text p{
+margin-top:20px;
+opacity:0.85;
+line-height:1.8;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0b0b0b;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:40px 20px;
+text-align:center;
+}
+
+.footer img{
+width:90px;
+margin-bottom:10px;
+filter:drop-shadow(0 0 10px #ff7a00);
+}
+
+.footer-social{
+margin:12px 0;
+}
+
+.footer-social a{
+color:white;
+font-size:20px;
+margin:0 12px;
+transition:0.4s;
+display:inline-block;
+animation:float 4s ease-in-out infinite;
+}
+
+.footer-social a:hover{
+color:#ff7a00;
+text-shadow:0 0 12px #ff7a00;
+transform:scale(1.2);
+}
+
+.footer-bottom{
+margin-top:15px;
+opacity:0.7;
+font-size:14px;
+}
+
+/* ANIMATIONS */
+
+@keyframes glow{
+0%{filter:drop-shadow(0 0 6px #ff7a00);}
+100%{filter:drop-shadow(0 0 20px #ff7a00);}
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-6px)}
+100%{transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+.ceo{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+<img class="logo" src="https://i.ibb.co/HD8Bwc2n/final-logo.png">
+
+<div class="title">About Us</div>
+<div class="tagline">Built on Strategy. Defined by Quality.</div>
+
+</section>
+
+<!-- WHO WE ARE -->
+
+<section class="section">
+
+<h2>Who We Are</h2>
+<p>
+Desert Pixel Media is a creative production agency built on the belief that strong content begins with clarity, strategy, and attention to detail.  
+We specialize in video editing, motion graphics, and content production — helping brands transform ideas into visuals that are both refined and effective.
+</p>
+
+</section>
+
+<!-- PHILOSOPHY -->
+
+<section class="section">
+
+<h2>Our Philosophy</h2>
+<p>
+“Desert” represents resilience and building something meaningful from the ground up.  
+“Pixel” represents precision — the smallest detail that shapes powerful visuals.  
+We believe that every frame matters, and that true quality is built through consistency and detail.
+</p>
+
+</section>
+
+<!-- WHAT WE DO -->
+
+<section class="section">
+
+<h2>What We Do</h2>
+<p>
+We create content that goes beyond aesthetics — ensuring it communicates clearly, engages audiences, and supports real brand growth through strategy, creativity, and precision.
+</p>
+
+</section>
+
+<!-- CEO SECTION -->
+
+<section class="ceo">
+
+<div class="ceo-img">
+<img src="https://i.ibb.co/wFq6fRr6/CEO-PIC.png">
+</div>
+
+<div class="ceo-text">
+
+<h2>Our CEO</h2>
+
+<h3>Abdelrahman Usama</h3>
+<span>Founder & CEO, Desert Pixel Media</span>
+
+<p>
+“Desert Pixel Media was built on a clear vision — to deliver a premium, full-scale creative experience that meets the highest standards of quality and execution.
+</p>
+
+<p>
+We aim to work with both high-end corporate brands and ambitious startups, providing content that is visually refined and strategically built to perform.
+</p>
+
+<p>
+Every project is approached with precision, intention, and a commitment to excellence — because strong visuals are not just seen, they are remembered.”
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<img src="https://i.ibb.co/HD8Bwc2n/final-logo.png">
+
+<p>Desert Pixel Media</p>
+
+<div class="footer-social">
+
+<a href="https://www.instagram.com/desertpixelmediaeg">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/company/desert-pixelmedia/">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:desertpixelmedia1@gmail.com">
+<i class="fa fa-envelope"></i>
+</a>
+
+</div>
+
+<p>Cairo, Egypt • Available Worldwide</p>
+
+<div class="footer-bottom">
+© 2026 Desert Pixel Media. All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
