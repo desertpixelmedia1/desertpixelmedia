@@ -16,7 +16,7 @@ background:#0b0b0b;
 color:white;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .video-banner{
 position:relative;
@@ -41,8 +41,6 @@ height:100%;
 background:rgba(0,0,0,0.6);
 }
 
-/* LOGO */
-
 .logo-overlay{
 position:absolute;
 top:30px;
@@ -56,8 +54,6 @@ animation:float 4s ease-in-out infinite;
 width:120px;
 filter:drop-shadow(0 0 15px #ff7a00);
 }
-
-/* HERO TEXT */
 
 .banner-content{
 position:absolute;
@@ -76,7 +72,7 @@ font-size:48px;
 opacity:0.8;
 }
 
-/* ================= SECTION ================= */
+/* SECTION */
 
 .section{
 max-width:1100px;
@@ -87,13 +83,14 @@ text-align:center;
 
 .section h2{
 font-size:28px;
+margin-bottom:10px;
 }
 
 .section p{
 color:#ff7a00;
 }
 
-/* ================= CLIENTS ================= */
+/* CLIENTS */
 
 .clients{
 display:flex;
@@ -114,65 +111,92 @@ opacity:1;
 filter:drop-shadow(0 0 10px #ff7a00);
 }
 
-/* ================= MAP ================= */
+/* FLAGS */
 
-.map-container{
-position:relative;
+.flags{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
 margin-top:40px;
 }
 
-.map{
-width:100%;
-border-radius:12px;
+.flag{
+text-align:center;
+transition:0.3s;
 }
 
-.pin{
-position:absolute;
-width:10px;
-height:10px;
-background:#ff7a00;
-border-radius:50%;
-box-shadow:0 0 12px #ff7a00;
-animation:pulse 2s infinite;
+.flag img{
+width:60px;
+border-radius:6px;
+box-shadow:0 0 12px rgba(255,122,0,0.2);
 }
 
-.egypt{top:55%;left:45%;}
-.uae{top:60%;left:65%;}
-.ksa{top:58%;left:55%;}
-.kuwait{top:52%;left:60%;}
-.qatar{top:57%;left:67%;}
-.bahrain{top:55%;left:66%;}
+.flag span{
+display:block;
+margin-top:8px;
+font-size:14px;
+opacity:0.8;
+}
 
-/* ================= REVIEWS ================= */
+.flag:hover{
+transform:translateY(-5px);
+}
+
+/* REVIEWS */
 
 .reviews-container{
 display:flex;
-overflow-x:auto;
-gap:20px;
-padding:20px;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.review-card{
-min-width:280px;
-background:#111;
-padding:20px;
+.flip-card{
+width:260px;
+height:220px;
+perspective:1000px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front, .flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
 border-radius:12px;
-box-shadow:0 0 20px rgba(255,122,0,0.15);
-text-align:left;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:#111;
+box-shadow:0 0 20px rgba(255,122,0,0.2);
 }
 
-.review-card img{
-width:40px;
+.flip-front img{
+width:60px;
 margin-bottom:10px;
 }
 
-.review-card span{
-display:block;
-margin-top:10px;
-color:#ff7a00;
+.flip-back{
+transform:rotateY(180deg);
+font-size:14px;
+text-align:center;
 }
 
-/* ================= PARTNERS ================= */
+/* PARTNERS */
 
 .slider{
 overflow:hidden;
@@ -191,7 +215,7 @@ margin:0 40px;
 opacity:0.8;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 .footer{
 text-align:center;
@@ -210,13 +234,7 @@ color:white;
 font-size:20px;
 }
 
-/* ================= ANIMATIONS ================= */
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.5);}
-100%{transform:scale(1);}
-}
+/* ANIMATIONS */
 
 @keyframes scroll{
 0%{transform:translateX(0);}
@@ -255,22 +273,19 @@ font-size:20px;
 
 </section>
 
-<!-- MAP -->
+<!-- FLAGS -->
 
 <section class="section">
-
 <h2>Our Reach</h2>
+<p>Working across the Middle East</p>
 
-<div class="map-container">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Middle_East_map.png" class="map">
-
-<div class="pin egypt"></div>
-<div class="pin uae"></div>
-<div class="pin ksa"></div>
-<div class="pin kuwait"></div>
-<div class="pin qatar"></div>
-<div class="pin bahrain"></div>
-
+<div class="flags">
+<div class="flag"><img src="https://flagcdn.com/w80/eg.png"><span>Egypt</span></div>
+<div class="flag"><img src="https://flagcdn.com/w80/ae.png"><span>UAE</span></div>
+<div class="flag"><img src="https://flagcdn.com/w80/sa.png"><span>Saudi Arabia</span></div>
+<div class="flag"><img src="https://flagcdn.com/w80/kw.png"><span>Kuwait</span></div>
+<div class="flag"><img src="https://flagcdn.com/w80/qa.png"><span>Qatar</span></div>
+<div class="flag"><img src="https://flagcdn.com/w80/bh.png"><span>Bahrain</span></div>
 </div>
 
 </section>
@@ -278,7 +293,6 @@ font-size:20px;
 <!-- CLIENTS -->
 
 <section class="section">
-
 <h2>Trusted By</h2>
 
 <div class="clients">
@@ -296,28 +310,34 @@ font-size:20px;
 <!-- REVIEWS -->
 
 <section class="section">
-
 <h2>Client Feedback</h2>
 
 <div class="reviews-container">
 
-<div class="review-card">
-<img src="https://i.ibb.co/6cZ41yb8/Etoile-Polyclinic.jpg">
-<p>High-quality content that elevated our brand image.</p>
-<span>Étoile Polyclinic</span>
-</div>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><img src="https://i.ibb.co/6cZ41yb8/Etoile-Polyclinic.jpg"><h3>Étoile Polyclinic</h3></div>
+<div class="flip-back"><p>Desert Pixel Media delivered high-quality content that elevated our brand image.</p></div>
+</div></div>
 
-<div class="review-card">
-<img src="https://i.ibb.co/Tq1XWQfQ/Smile-elreem.jpg">
-<p>Clean and perfectly aligned with our brand.</p>
-<span>Smile Al Reem</span>
-</div>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><img src="https://i.ibb.co/Tq1XWQfQ/Smile-elreem.jpg"><h3>Smile Al Reem</h3></div>
+<div class="flip-back"><p>Clean, engaging, and perfectly aligned with our brand identity.</p></div>
+</div></div>
 
-<div class="review-card">
-<img src="https://i.ibb.co/nNy28Wdh/Al-Farooq-Medical-Center.jpg">
-<p>Professional, creative, and reliable.</p>
-<span>Al Farooq</span>
-</div>
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><img src="https://i.ibb.co/nNy28Wdh/Al-Farooq-Medical-Center.jpg"><h3>Al Farooq</h3></div>
+<div class="flip-back"><p>Professional, creative, and reliable.</p></div>
+</div></div>
+
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><img src="https://i.ibb.co/hJwtBVTJ/Ansari-Medical-Center.jpg"><h3>Ansari</h3></div>
+<div class="flip-back"><p>Exceptional precision and creativity.</p></div>
+</div></div>
+
+<div class="flip-card"><div class="flip-inner">
+<div class="flip-front"><img src="https://i.ibb.co/YF73sp1x/Darqoon-Medical-Center.jpg"><h3>Darqoon</h3></div>
+<div class="flip-back"><p>High-quality production and attention to detail.</p></div>
+</div></div>
 
 </div>
 
@@ -326,22 +346,18 @@ font-size:20px;
 <!-- PARTNERS -->
 
 <section class="section">
-
 <h2>Our Partners</h2>
 
 <div class="slider">
 <div class="slide-track">
-
 <img src="https://i.ibb.co/HDsFVJ4z/Adobe-Logo.png">
 <img src="https://i.ibb.co/20yR99vY/2B-logo.png">
 <img src="https://i.ibb.co/zVjkgg94/Lenovo-Logo.png">
 <img src="https://i.ibb.co/j9bkqxHG/Google-Symbol.png">
-
 <img src="https://i.ibb.co/HDsFVJ4z/Adobe-Logo.png">
 <img src="https://i.ibb.co/20yR99vY/2B-logo.png">
 <img src="https://i.ibb.co/zVjkgg94/Lenovo-Logo.png">
 <img src="https://i.ibb.co/j9bkqxHG/Google-Symbol.png">
-
 </div>
 </div>
 
